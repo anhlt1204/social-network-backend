@@ -1,5 +1,6 @@
 package com.ados.socialnetwork.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -17,5 +18,6 @@ public class Image extends BaseEntity {
     @JoinColumn(name = "post_id")
     @EqualsAndHashCode.Exclude
     @ToString.Exclude
+    @JsonIgnore
     private Post post;
 }

@@ -1,23 +1,38 @@
 spring:
-#  main:
-#    allow-circular-references: true
   application:
     name: social-network
-  servlet:
-    multipart:
-      max-file-size: 100MB
-      max-request-size: 100MB
+#  servlet:
+#    multipart:
+#      max-file-size: 100MB
+#      max-request-size: 100MB
+#  datasource:
+#    url: jdbc:mysql://localhost/social-network?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
+#    username: root
+#    password: 123456789
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL57Dialect
+#        storage_engine: innodb
+
   datasource:
-    url: jdbc:mysql://localhost/social-network?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
-    username: root
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/social-network
+    username: postgres
     password: 123456789
+  data:
+    cassandra:
+      schema-action: create_if_not_exists
   jpa:
+    open-in-view: false
     hibernate:
       ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL57Dialect
-        storage_engine: innodb
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  servlet:
+    multipart:
+      max-file-size: 10MB
 
 server:
   port: ${SOCIAL_NETWORK_PORT:9999}

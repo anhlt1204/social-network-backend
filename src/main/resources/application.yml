@@ -55,4 +55,5 @@ cloudinary:
 application:
   version: ${VERSION:1.0}
   swagger:
-    base-uri: localhost
+#    base-uri: localhost
+    base-uri: https://social-network-ados.herokuapp.com/

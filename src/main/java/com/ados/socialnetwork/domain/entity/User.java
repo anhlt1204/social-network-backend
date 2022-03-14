@@ -5,10 +5,12 @@ import lombok.Data;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 import java.util.Date;
 
 @Entity
 @Data
+@Table(name = "users")
 public class User extends BaseEntity {
     private String firstName;
     private String lastName;

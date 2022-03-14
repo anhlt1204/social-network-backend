@@ -19,9 +19,9 @@ spring:
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/social-network
-    username: postgres
-    password: 123456789
+    url: jdbc:postgresql://ec2-3-209-61-239.compute-1.amazonaws.com:5432/d26ij6tn5c5pv3
+    username: xxsufefscsafro
+    password: d6213803eb258a41b25e553dee193b1107421e3c9744aaa8271499f68ef652ef
   data:
     cassandra:
       schema-action: create_if_not_exists
